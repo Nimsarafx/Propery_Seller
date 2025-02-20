@@ -1,33 +1,17 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  flex-direction: column;
   min-width: 320px;
   min-height: 100vh;
+  background-color: rgb(255, 255, 255);
+  font-family: Arial, sans-serif;
 }
 
 h1 {
@@ -46,23 +30,173 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+
+form {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: rgba(65, 216, 221, 0.7);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.formdetails {
+  background-image:linear-gradient(rgba(38, 51, 103, 0.5),rgba(38, 51, 103, 0.5)), url(images/prop1pic1.webp);
+  min-height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+ 
+
+}
+.form-header {
+  color: #ffffff;
+  font-size: 1.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding-top: 50px;
+  margin-bottom: 90px;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input, select {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Property List Styles */
+.property-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  max-width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: rgba(65, 216, 221, 0.5);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.property-list {
+  flex: 2;
+  padding: 20px;
+}
+
+.property-list h3 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.property-list-ul {
+  min-height: 100px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.property-item {
+  border: 1px solid #e0e0e0;
+  margin: 10px 0;
+  padding: 15px;
+  position: relative;
+  background: white;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.property-item:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.property-item.dragging {
+  background: #f8f9fa;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.property-content {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.property-image {
+  width: 150px;
+  height: 150px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.property-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.property-image img:hover {
+  transform: scale(1.05);
+}
+
+.property-details {
+  flex: 1;
+}
+
+.property-details h4 {
+  margin: 0 0 8px 0;
+  color: #2c3e50;
+  font-size: 1.2em;
+}
+
+.property-details p {
+  margin: 4px 0;
+  color: #555;
+  line-height: 1.4;
+}
+.property-pictures {
+  display: flex;
+  min-height: 80vh;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid #000000;
+
+}
+.property-main-image {
+  min-height: 80vh;
+  margin:10px 10px 10px ;
+  border-radius: 10px;
+  border: 1px solid #000000;
+}
+.property-pictures-thumbnails {
+  padding: 10px 30px 10px 30px;
+  margin: 2%;
+  display: flex;
+  justify-content: space-between;
+  
 }
