@@ -320,3 +320,38 @@ button:hover {
   width: 100%;
   height: auto;
 }
+.thumbnail-images img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+}
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #f0f0f0;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .property-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .favorites-panel {
+    border-left: none;
+    border-top: 1px solid #e0e0e0;
+    min-width: auto;
+  }
+
+  .property-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .favorite-image {
+    width: 60px;
+    height: 60px;
+  }
+}
